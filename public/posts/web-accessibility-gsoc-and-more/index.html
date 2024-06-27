@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width"><meta name="description" content="A brief overview of web accessibility, Google Summer of Code, and more with Zendalona." />
+
+<title>
+    
+    Web Accessibility, GSoC, and More ft. Zendalona | Vichukartha
+    
+</title>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.df326ea8cc0679f1bc5088567a38bffe811fdbcf51babf11a37230853d2faeff.css" media="all">
+
+
+
+
+  
+
+
+
+  </head>
+
+  
+
+  
+  
+  
+
+  <body class="auto">
+
+    <div class="content">
+      <header>
+        
+
+<div class="header">
+    <h1 class="header-title">Vichukartha</h1>
+
+    <div class="flex">
+        
+
+        
+        
+        <p class="small ">
+            <a href="/">
+                /home
+            </a>
+        </p>
+        
+        <p class="small ">
+            <a href="/posts">
+                /posts
+            </a>
+        </p>
+        
+        <p class="small ">
+            <a href="/about">
+                /about
+            </a>
+        </p>
+        
+        
+    </div>
+
+</div>
+      </header>
+
+      <main class="main">
+        
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a href="/posts/">Posts</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a class="breadcrumbs-current" href="/posts/web-accessibility-gsoc-and-more/">Web Accessibility, GSoC, and More ft. Zendalona</a>
+</div>
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">Web Accessibility, GSoC, and More ft. Zendalona</h1>
+    
+    <p class="single-summary">A brief overview of web accessibility, Google Summer of Code, and more with Zendalona.</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2024-06-27T00:00:00&#43;00:00">June 27, 2024</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      3 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+  <aside class="toc">
+    <p><strong>Table of contents</strong></p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#web-accessibility">Web Accessibility</a></li>
+  </ul>
+</nav>
+  </aside>
+  
+
+  
+
+  <div class="single-content">
+    <h2 id="intro">Intro</h2>
+<p>When I got the mail from Google Summer of Code a month ago, I was thrilled. I had been waiting for this moment for a long time. GSoC had almost been a lost hope for me this year too, but thanks to the stars (@Nalin, @Mukundan, @Sathyan, @Akshay), I was able to make it. The proposal I submitted was to work on a User Query Management System <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> for <a href="https://zendalona.com/">Zendalona</a>. The idea was to take an existing ticketing system and make it more accessible, while also adding some new features for managing queries for Zendalona users. I was excited to work on this project and looked forward to the community bonding period.</p>
+<p>During the community bonding period, I contacted polonel, the creator and maintainer of <a href="https://trudesk.io">Trudesk</a>, regarding the project and its aims. I also had a meeting with the Zendalona team to discuss the project and the timeline. The community bonding period was a great time to get to know the community and the project better. I also got to know the other GSoC students and the mentors. My mentors for the project are @Mukundan, @Akshay, and @Sathyan. They have been very helpful and supportive throughout the community bonding period.</p>
+<h2 id="web-accessibility">Web Accessibility</h2>
+<p>Web Accessibility is one of those things that is often overlooked by developers. It is important to make sure that the web is accessible to everyone, including people with disabilities. Web Accessibility is the practice of ensuring that websites are usable by people of all abilities and disabilities. Web standards have long evolved to include accessibility features, but many websites still do not follow these standards. This can be attributed to the fact that following those standards can be time-consuming and difficult. For the project, I will be working on making the User Query Management System more accessible. I know things might not be as easy as they seem, but I believe that it will be worth the effort.</p>
+<p>For the past month, I have been going through the source code of Trudesk, finding accessibility issues, and trying to fix them. This might seem like a small task and, quite frankly, it did seem like that to me too. However, as I started working on it, I realized that it is not as easy as it seems. There are many places where the code is already screen reader-friendly, but there are also places where it is not even remotely accessible. Going through each component, checking where they&rsquo;re being used, identifying the type of component, and then deciding what ARIA roles to add is a tedious task, especially since I am new to this.</p>
+<p>Another great challenge in starting was the sheer amount of work required just to set up the environment. The legacy JavaScript packages and code did not help! Thankfully, @Akshay came to the rescue. I bugged him a lot while trying to set up the development server on my system. Finally, after a lot of trial and error, we managed to get the server up and running. Our conversations actually taught me a lot about Node.js and a bit about its history, so that&rsquo;s a win-win.</p>
+<p>Here&rsquo;s a link to my fork <a href="https://github.com/anima-regem/trudesk">anima-regem/trudesk</a></p>
+<p>and</p>
+<p>the original repo <a href="https://github.com/polonel/trudesk">polonel/trudesk</a></p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>User Query Management System: A system that helps the users to manage their queries and get the answers to their queries. It can also be called a ticketing system. Here&rsquo;s my proposal for the same:
+<a href="https://summerofcode.withgoogle.com/programs/2024/projects/IMXwpDEG">Proposal</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    
+  </div>
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </main>
+    </div>
+
+    <footer>
+      <p>Powered by
+    <a href="https://gohugo.io/">Hugo</a>
+    and
+    <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+</p>
+
+
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+
+    </footer>
+
+  </body>
+
+  <script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+</html>
