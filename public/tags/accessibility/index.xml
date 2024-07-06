@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Accessibility on Vichukartha</title>
-    <link>https://example.org/tags/accessibility/</link>
+    <link>http://localhost:1313/tags/accessibility/</link>
     <description>Recent content in Accessibility on Vichukartha</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/accessibility/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/accessibility/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Web Accessibility, GSoC, and More ft. Zendalona</title>
-      <link>https://example.org/posts/web-accessibility-gsoc-and-more/</link>
+      <link>http://localhost:1313/posts/web-accessibility-gsoc-and-more/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/web-accessibility-gsoc-and-more/</guid>
+      <guid>http://localhost:1313/posts/web-accessibility-gsoc-and-more/</guid>
       <description>A brief overview of web accessibility, Google Summer of Code, and more with Zendalona.</description>
     </item>
   </channel>
