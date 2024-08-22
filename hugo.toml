@@ -7,7 +7,7 @@ theme = 'typo'
 tag = 'tags'
 
 # Google analytics code
-googleAnalytics = "G-xxxxxxxxx"
+# googleAnalytics = "G-xxxxxxxxx"
 
 [params]
 # Meta description
@@ -66,11 +66,11 @@ url = "/about"
 style = 'algol'
 
 # Giscus comments
-[params.giscus]
-enable = false
-repo = "user/repo"
-repoid = "repoId"
-category = "General"
-categoryid = "categoryId"
-mapping = "pathname"
-theme = "preferred_color_scheme"
+# [params.giscus]
+# enable = false
+# repo = "user/repo"
+# repoid = "repoId"
+# category = "General"
+# categoryid = "categoryId"
+# mapping = "pathname"
+# theme = "preferred_color_scheme"

@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vichukartha</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Vichukartha</description>
+    <title>Home on Vichukartha</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content in Home on Vichukartha</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React and Accessibility</title>
+      <link>//localhost:1313/posts/react-and-accessibility/</link>
+      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/react-and-accessibility/</guid>
+      <description>My rant on React and Accessibility.</description>
+    </item>
+    <item>
+      <title>The GSoC Summary</title>
+      <link>//localhost:1313/posts/the-gsoc-summary/</link>
+      <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/the-gsoc-summary/</guid>
+      <description>The final report on GSoC 2024 under Zendalona working on the User Query Management Software</description>
+    </item>
     <item>
       <title>Web Accessibility, GSoC, and More ft. Zendalona</title>
-      <link>http://localhost:1313/posts/web-accessibility-gsoc-and-more/</link>
+      <link>//localhost:1313/posts/web-accessibility-gsoc-and-more/</link>
       <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/web-accessibility-gsoc-and-more/</guid>
+      <guid>//localhost:1313/posts/web-accessibility-gsoc-and-more/</guid>
       <description>A brief overview of web accessibility, Google Summer of Code, and more with Zendalona.</description>
     </item>
   </channel>

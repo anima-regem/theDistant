@@ -2,38 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Vichukartha</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>//localhost:1313/tags/</link>
     <description>Recent content in Tags on Vichukartha</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Accessibility</title>
-      <link>http://localhost:1313/tags/accessibility/</link>
-      <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/accessibility/</guid>
+      <link>//localhost:1313/tags/accessibility/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/accessibility/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Final</title>
+      <link>//localhost:1313/tags/final/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/final/</guid>
       <description></description>
     </item>
     <item>
       <title>Gsoc</title>
-      <link>http://localhost:1313/tags/gsoc/</link>
-      <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/gsoc/</guid>
+      <link>//localhost:1313/tags/gsoc/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/gsoc/</guid>
       <description></description>
     </item>
     <item>
       <title>Web</title>
-      <link>http://localhost:1313/tags/web/</link>
-      <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/web/</guid>
+      <link>//localhost:1313/tags/web/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/web/</guid>
       <description></description>
     </item>
     <item>
       <title>Zendalona</title>
-      <link>http://localhost:1313/tags/zendalona/</link>
-      <pubDate>Thu, 27 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/zendalona/</guid>
+      <link>//localhost:1313/tags/zendalona/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/zendalona/</guid>
       <description></description>
     </item>
   </channel>
