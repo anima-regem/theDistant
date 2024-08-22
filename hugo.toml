@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'blog.animaregem.me'
 languageCode = 'en-us'
 title = 'Vichukartha'
 theme = 'typo'
