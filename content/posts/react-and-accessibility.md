@@ -1,6 +1,6 @@
 ---
 title: "React and Accessibility"
-date: "2024-08-26"
+date: "2024-08-21"
 summary: "My rant on React and Accessibility."
 description: "My rant on React and Accessibility."
 toc: true
