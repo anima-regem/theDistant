@@ -1,6 +1,6 @@
 ---
 title: "The GSoC Summary"
-date: "2024-08-24"
+date: "2024-08-26"
 summary: "The final report on GSoC 2024 under Zendalona working on the User Query Management Software"
 description: "The final report on GSoC 2024 under Zendalona working on the User Query Management Software brief overview of web accessibility, Google Summer of Code, and more with Zendalona."
 toc: true
