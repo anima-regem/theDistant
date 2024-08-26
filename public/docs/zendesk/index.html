@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="//localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="//localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="//localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+<title>
+    
+    ZenDesk | Vichukartha
+    
+</title>
+
+<link rel="canonical" href="//localhost:1313/docs/zendesk/"/>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.1b30d651819daff0be2eb72e29c6d7b1e8846182d31842822600174f4a20be48.css" media="all">
+
+
+
+
+
+
+  </head>
+
+  
+
+  
+  
+  
+
+  <body class="auto">
+
+    <div class="content">
+      <header>
+        
+
+<div class="header">
+
+    
+
+    <h1 class="header-title">Vichukartha</h1>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/docs" >
+                /docs
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/about" >
+                /about
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+      </header>
+
+      <main class="main">
+        
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a href="/docs/">Docs</a>
+    <span class="breadcrumbs-separator"> > </span>
+    
+    <a class="breadcrumbs-current" href="/docs/zendesk/">ZenDesk</a>
+</div>
+
+
+<div  class="autonumber" >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">ZenDesk</h1>
+    
+    <p class="single-summary">ZenDesk, an accessible user query management software based on TruDesk</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2024-08-22T00:00:00&#43;00:00">August 22, 2024</time>
+      
+
+      
+      &nbsp; · &nbsp;
+      5 min read
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+  <aside class="toc">
+    <p><strong>Table of contents</strong></p>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#project-setup">Project Setup</a>
+      <ul>
+        <li><a href="#clone-the-repository">Clone the Repository</a></li>
+        <li><a href="#install-nodejs-version-1620">Install Node.js Version 16.20</a></li>
+        <li><a href="#install-yarn-and-git">Install Yarn and Git</a></li>
+        <li><a href="#install-mongodb">Install MongoDB</a></li>
+        <li><a href="#mongodb-setup">MongoDB Setup</a></li>
+        <li><a href="#install-project-dependencies-master-branch">Install Project Dependencies (Master Branch)</a></li>
+        <li><a href="#launch-the-application">Launch the Application</a></li>
+        <li><a href="#switch-to-the-zendesk-branch">Switch to the Zendesk Branch</a></li>
+        <li><a href="#install-dependencies-and-build-zendesk-branch">Install Dependencies and Build (Zendesk Branch)</a></li>
+        <li><a href="#access-the-project">Access the Project</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#changes-made-from-the-original-trudesk">Changes Made from the Original Trudesk</a>
+      <ul>
+        <li><a href="#aria-live-regions-for-dynamic-content">Aria Live Regions for Dynamic Content</a></li>
+        <li><a href="#keyboard-navigation-and-focus-management">Keyboard Navigation and Focus Management</a></li>
+        <li><a href="#shadow-components-for-announcements">Shadow Components for Announcements</a></li>
+        <li><a href="#enhanced-keyboard-shortcuts">Enhanced Keyboard Shortcuts</a></li>
+        <li><a href="#general-improvements">General Improvements</a></li>
+      </ul>
+    </li>
+    <li><a href="#todo-list">TODO List</a>
+      <ul>
+        <li><a href="#fixing-the-singleselect-component">Fixing the SingleSelect Component</a></li>
+        <li><a href="#creating-a-signup-page">Creating a SignUp Page</a></li>
+        <li><a href="#announcing-the-popup-popping-up">Announcing the Popup Popping Up</a></li>
+        <li><a href="#fixing-the-textarea">Fixing the Textarea</a></li>
+        <li><a href="#guidance-for-text-entries">Guidance for Text Entries</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </aside>
+  
+
+  
+
+  <div class="single-content">
+    <h1 id="zendesk">ZenDesk</h1>
+<hr>
+<p>
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="A Screenshot of ZenDesk" src=" ../../assets/zendesk.png">
+    </div>
+
+    
+</figure></p>
+<h2 id="project-setup">Project Setup</h2>
+<p>To get started with the custom version of Trudesk (referred to as Zendesk in this context), follow these steps:</p>
+<h3 id="clone-the-repository">Clone the Repository</h3>
+<p>Start by cloning the custom Trudesk repository:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone https://github.com/anima-regem/trudesk.git
+</span></span></code></pre></div><h3 id="install-nodejs-version-1620">Install Node.js Version 16.20</h3>
+<p>Ensure you have Node.js version 16.20 installed. You can use <code>nvm</code> (Node Version Manager) to install the required version. If you don&rsquo;t have <code>nvm</code> installed, you can follow the <a href="https://github.com/nvm-sh/nvm#installing-and-updating">nvm installation guide</a>.</p>
+<p>Once <code>nvm</code> is installed, you can install and use Node.js version 16.20:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nvm install 16.20
+</span></span><span style="display:flex;"><span>nvm use 16.20
+</span></span></code></pre></div><h3 id="install-yarn-and-git">Install Yarn and Git</h3>
+<p>If you haven’t already installed Yarn and Git, you can do so using the following command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install -g yarn
+</span></span></code></pre></div><h3 id="install-mongodb">Install MongoDB</h3>
+<p>You need MongoDB installed and running to use the Zendesk custom Trudesk project. Follow the official <a href="https://docs.mongodb.com/manual/installation/">MongoDB installation guide</a> to install MongoDB on your system.</p>
+<h3 id="mongodb-setup">MongoDB Setup</h3>
+<p>After installing MongoDB, create an admin user for the Trudesk database:</p>
+<ol>
+<li>
+<p>Start the MongoDB shell:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mongo
+</span></span></code></pre></div></li>
+<li>
+<p>Switch to the <code>admin</code> database:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>use admin
+</span></span></code></pre></div></li>
+<li>
+<p>Create an admin user with the following command:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>db.createUser({
+</span></span><span style="display:flex;"><span>   user: <span style="color:#666;font-style:italic">&#34;trudeskAdmin&#34;</span>,
+</span></span><span style="display:flex;"><span>   pwd: <span style="color:#666;font-style:italic">&#34;yourPasswordHere&#34;</span>,
+</span></span><span style="display:flex;"><span>   roles: [{ role: <span style="color:#666;font-style:italic">&#34;userAdmin&#34;</span>, db: <span style="color:#666;font-style:italic">&#34;trudesk&#34;</span> }]
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div></li>
+</ol>
+<p>Replace <code>&quot;yourPasswordHere&quot;</code> with a secure password.</p>
+<h3 id="install-project-dependencies-master-branch">Install Project Dependencies (Master Branch)</h3>
+<p>Navigate to the cloned project folder and switch to the master branch:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="font-weight:bold;font-style:italic">cd</span> trudesk
+</span></span><span style="display:flex;"><span>git checkout master
+</span></span></code></pre></div><p>Install the project dependencies and run the build:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn install
+</span></span><span style="display:flex;"><span>yarn run grunt
+</span></span></code></pre></div><h3 id="launch-the-application">Launch the Application</h3>
+<p>Once the project is ready, launch the application by going to <code>http://localhost:8118</code>. You can then proceed with the web-based installation:</p>
+<ul>
+<li>Provide the credentials for the MongoDB admin user you created earlier.</li>
+<li>Set up a new database or use an existing one.</li>
+<li>If needed, you can create additional users from the master branch (note that signup is not implemented in the Zendesk branch).</li>
+</ul>
+<h3 id="switch-to-the-zendesk-branch">Switch to the Zendesk Branch</h3>
+<p>After setting up the master branch, stash any changes:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git stash
+</span></span></code></pre></div><p>Then, switch to the Zendesk branch:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git checkout zendesk
+</span></span></code></pre></div><h3 id="install-dependencies-and-build-zendesk-branch">Install Dependencies and Build (Zendesk Branch)</h3>
+<p>Install dependencies and run the build for the Zendesk branch:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn install
+</span></span><span style="display:flex;"><span>yarn run grunt
+</span></span></code></pre></div><h3 id="access-the-project">Access the Project</h3>
+<p>You can now go to <code>http://localhost:8118</code> to see the project in action.</p>
+<h2 id="usage">Usage</h2>
+<p>The project provides the following features:</p>
+<ul>
+<li><strong>Create Tickets</strong>: Users can create support tickets to report issues or requests.</li>
+<li><strong>Respond to Tickets</strong>: Team members can respond to tickets, providing support or further information.</li>
+<li><strong>Add Comments to Tickets</strong>: Users and team members can add comments to ongoing tickets for better communication.</li>
+<li><strong>Update Profile and Settings</strong>: Users can update their profile information and configure their settings.</li>
+<li><strong>View Dashboard of Tickets</strong>: A dashboard view that shows the status and details of all tickets.</li>
+<li><strong>Manage Users, Groups, Tags, etc.</strong>: Admins can manage users, groups, and tags to organize and streamline support activities.</li>
+</ul>
+<h2 id="changes-made-from-the-original-trudesk">Changes Made from the Original Trudesk</h2>
+<p>Significant changes were made to enhance accessibility and improve overall functionality from the original Trudesk project. Here’s a summary of the key modifications:</p>
+<h3 id="aria-live-regions-for-dynamic-content">Aria Live Regions for Dynamic Content</h3>
+<ul>
+<li>The main component of Trudesk is dynamically rendered since it’s a Single Page Application (SPA). To ensure that screen readers properly announce content changes, we implemented an aria-live region. This region announces updates as they occur, improving accessibility for users relying on assistive technologies.</li>
+</ul>
+<h3 id="keyboard-navigation-and-focus-management">Keyboard Navigation and Focus Management</h3>
+<ul>
+<li>We made all links and buttons fully navigable using the keyboard. Custom components like accordions, which initially lacked proper keyboard accessibility, were reworked to support navigation using JavaScript events such as <code>onFocus</code> and <code>onClick</code>.</li>
+<li>Proper focus management was a priority, ensuring that users can efficiently navigate through the application using the keyboard. This was particularly challenging with custom modals, select components, and tables containing buttons, but we tackled these issues with a combination of JavaScript and careful component design.</li>
+</ul>
+<h3 id="shadow-components-for-announcements">Shadow Components for Announcements</h3>
+<ul>
+<li>Many accessibility issues stemmed from the heavy use of custom components. To address this, we introduced shadow components—background elements with a low z-index that aren’t visible in the DOM. These shadow components were given aria-live attributes, and changes in the UI were tracked with JavaScript. By writing updates to these hidden divs, we ensured that necessary changes were properly announced to users.</li>
+</ul>
+<h3 id="enhanced-keyboard-shortcuts">Enhanced Keyboard Shortcuts</h3>
+<ul>
+<li>We implemented keyboard shortcuts for various pages within the application, making it easier for users to navigate without relying on a mouse or trackpad.</li>
+</ul>
+<h3 id="general-improvements">General Improvements</h3>
+<ul>
+<li>Several general improvements were also made, including fixing faulty installation processes and implementing authentication-based restrictions on various endpoints. These changes not only enhanced security but also contributed to a smoother user experience.</li>
+</ul>
+<h2 id="todo-list">TODO List</h2>
+<p>There are still a few tasks that need to be completed to further enhance the functionality and accessibility of the Zendesk custom Trudesk project. Here’s what’s on the list:</p>
+<h3 id="fixing-the-singleselect-component">Fixing the SingleSelect Component</h3>
+<ul>
+<li>The SingleSelect component currently has some issues that need to be addressed to improve its usability and accessibility. This includes ensuring proper keyboard navigation and screen reader support.</li>
+</ul>
+<h3 id="creating-a-signup-page">Creating a SignUp Page</h3>
+<ul>
+<li>A SignUp page needs to be implemented to allow new users to register within the application. This can either be developed in-house or integrated from the upstream <code>next</code> branch once it&rsquo;s available.</li>
+</ul>
+<h3 id="announcing-the-popup-popping-up">Announcing the Popup Popping Up</h3>
+<ul>
+<li>Ensuring that popups are announced properly when they appear is crucial for accessibility. This involves implementing a mechanism to alert screen readers when a popup is triggered.</li>
+</ul>
+<h3 id="fixing-the-textarea">Fixing the Textarea</h3>
+<ul>
+<li>The textarea component needs adjustments to ensure it is fully accessible, including proper labeling and handling of focus events.</li>
+</ul>
+<h3 id="guidance-for-text-entries">Guidance for Text Entries</h3>
+<ul>
+<li>For text entry fields, especially in forms and messaging, implementing a feature that prompts users to &ldquo;type your message&rdquo; would enhance usability and provide clear guidance for screen reader users.</li>
+</ul>
+
+    
+  </div>
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+      </main>
+    </div>
+
+    <footer>
+      <p>Powered by
+    <a href="https://gohugo.io/">Hugo</a>
+    and
+    <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+</p>
+
+
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+
+    </footer>
+
+  </body>
+
+  <script>
+
+  function isAuto() {
+    return document.body.classList.contains("auto");
+  }
+
+  function setTheme() {
+    if (!isAuto()) {
+      return
+    }
+
+    document.body.classList.remove("auto");
+    let cls = "light";
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      cls = "dark";
+    }
+
+    document.body.classList.add(cls);
+  }
+
+  function invertBody() {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+  }
+
+  if (isAuto()) {
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(invertBody);
+  }
+
+  setTheme();
+
+</script>
+
+</html>

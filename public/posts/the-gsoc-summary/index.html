@@ -78,6 +78,13 @@
         
       
         <p class="small ">
+            <a href="/docs" >
+                /docs
+            </a>
+        </p>
+        
+      
+        <p class="small ">
             <a href="/about" >
                 /about
             </a>
@@ -127,12 +134,12 @@
       
       
       
-      <time datetime="2024-08-23T00:00:00&#43;00:00">August 23, 2024</time>
+      <time datetime="2024-08-24T00:00:00&#43;00:00">August 24, 2024</time>
       
 
       
       &nbsp; · &nbsp;
-      1 min read
+      6 min read
       
     </p>
 
@@ -145,7 +152,25 @@
   
   <aside class="toc">
     <p><strong>Table of contents</strong></p>
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-project-trudesk-customization-for-zendalona">The Project: Trudesk Customization for Zendalona</a></li>
+    <li><a href="#the-grand-plan">The Grand Plan</a></li>
+    <li><a href="#key-changes-and-contributions">Key Changes and Contributions</a>
+      <ul>
+        <li><a href="#aria-live-regions-for-dynamic-content">Aria Live Regions for Dynamic Content:</a></li>
+        <li><a href="#improved-keyboard-navigation-and-focus-management">Improved Keyboard Navigation and Focus Management:</a></li>
+        <li><a href="#shadow-components-for-announcements">Shadow Components for Announcements:</a></li>
+        <li><a href="#general-enhancements">General Enhancements:</a></li>
+        <li><a href="#merged-pull-requests">Merged Pull Requests</a></li>
+        <li><a href="#branches-in-the-custom-trudesk-repository">Branches in the Custom Trudesk Repository</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-todo-list-whats-next">The TODO List: What&rsquo;s Next?</a></li>
+    <li><a href="#the-verdict">The Verdict</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
   </aside>
   
 
@@ -153,7 +178,119 @@
 
   <div class="single-content">
     <h1 id="the-gsoc-summary--on-zendalona-trudesk-and-accessibility">The GSoC Summary : On Zendalona, Trudesk and Accessibility</h1>
-<p>Hi</p>
+<h2 id="the-project-trudesk-customization-for-zendalona">The Project: Trudesk Customization for Zendalona</h2>
+<p>The project I worked on as part of Google Summer of Code 2024(GSoC 2024) involved customizing Trudesk to meet the specific needs of Zendalona, with a strong focus on enhancing accessibility for users relying on screen readers and keyboard navigation. Trudesk, being a Single Page Application (SPA), posed unique challenges in terms of dynamic content updates, keyboard accessibility, and screen reader compatibility.</p>
+<h2 id="the-grand-plan">The Grand Plan</h2>
+<p>The plan, at the outset, seemed straightforward enough: make the project more screen reader-friendly during the first month and then dive into implementing some custom features. Simple, right? Well, as it turns out, that initial scope was significantly optimistic. The goal of making the project truly accessible to screen readers quickly revealed itself to be a monumental task, far more complex than I had anticipated.</p>
+<p>As I started navigating through the codebase, I realized that the issues weren’t just surface-level tweaks—they were deeply embedded in the structure of the application. The project was heavily reliant on custom components, which meant that many accessibility issues couldn’t be resolved with a quick fix. Each custom component had its own quirks, and figuring out where the problems lay often felt like trying to find a needle in a haystack. A task that seemed simple on the surface, like making a button accessible or ensuring a popup was announced, often took hours or even days of trial and error.</p>
+<p>On top of that, the project setup itself was not the most cooperative. Every time I thought I was making progress, I’d hit a roadblock when trying to build the project on a different machine. The setup would break, and I’d find myself back at square one, trying to troubleshoot issues that seemed to crop up out of nowhere. It was frustrating, to say the least. But thanks to my mentor, @Akshay, these challenges became bearable. There were moments when I’d spend hours wrestling with a problem, only for him to step in and solve it in a matter of seconds. His guidance was invaluable, and I can’t overstate how much his support meant during those tough times.</p>
+<p>Despite these challenges, by the end of the GSoC coding period on August 19th, the project had come a long way. The entire application can now be navigated using just the keyboard, with screen reader announcements guiding the way. It’s a far cry from where we started, but it’s not perfect yet. There are still some issues that need to be addressed, as noted in the TODO list, but the progress made so far is something I’m proud of. The journey has been intense, filled with unexpected hurdles, but seeing the project become more inclusive and accessible has made it all worth it.</p>
+<p>The work isn’t done, but this phase of the project has laid a solid foundation for the improvements yet to come.</p>
+<h2 id="key-changes-and-contributions">Key Changes and Contributions</h2>
+<h3 id="aria-live-regions-for-dynamic-content">Aria Live Regions for Dynamic Content:</h3>
+<p>Since Trudesk dynamically renders content, it was crucial to implement aria-live regions to ensure screen readers announce changes appropriately. This enhancement made the application more accessible for users who rely on assistive technologies.</p>
+<h3 id="improved-keyboard-navigation-and-focus-management">Improved Keyboard Navigation and Focus Management:</h3>
+<p>I made sure that all links, buttons, and custom components like accordions were fully navigable using the keyboard. Proper focus management was implemented, ensuring a seamless navigation experience.</p>
+<h3 id="shadow-components-for-announcements">Shadow Components for Announcements:</h3>
+<p>One of the innovative solutions involved creating shadow components with low z-index and aria-live attributes. These components track UI changes through JavaScript and ensure that necessary updates are properly announced by screen readers.</p>
+<h3 id="general-enhancements">General Enhancements:</h3>
+<p>In addition to accessibility improvements, I also made general enhancements such as fixing faulty installations and implementing authentication-based restrictions on various endpoints.</p>
+<p>You can read more about the project at <a href="/docs/zendesk">ZenDesk post</a></p>
+<p>You can explore the codebase for these enhancements on my <a href="https://github.com/anima-regem/trudesk">custom Trudesk repository</a>. The project is currently hosted and live at <a href="http://13.235.119.106:8118">http://13.235.119.106:8118</a>.</p>
+<h3 id="merged-pull-requests">Merged Pull Requests</h3>
+<p>Throughout the project, I submitted several pull requests (PRs) to the original Trudesk repository, which were subsequently merged. Here are the key PRs that were integrated:</p>
+<ul>
+<li><a href="https://github.com/polonel/trudesk/pull/688">PR #688:</a></li>
+<li><a href="https://github.com/polonel/trudesk/pull/687">PR #687:</a></li>
+<li><a href="https://github.com/polonel/trudesk/pull/685">PR #685:</a></li>
+<li><a href="https://github.com/polonel/trudesk/pull/679">PR #679:</a></li>
+</ul>
+<h3 id="branches-in-the-custom-trudesk-repository">Branches in the Custom Trudesk Repository</h3>
+<p>The custom Trudesk repository contains several branches that represent different stages and features of the project:</p>
+<ul>
+<li><strong><a href="https://github.com/anima-regem/trudesk/tree/master">Master Branch</a>:</strong> The stable version with all basic setup and initial enhancements.</li>
+<li><strong><a href="https://github.com/anima-regem/trudesk/tree/zendesk">Zendesk Branch</a>:</strong> Contains specific customizations for Zendalona, focusing heavily on accessibility improvements.</li>
+</ul>
+<h2 id="the-todo-list-whats-next">The TODO List: What&rsquo;s Next?</h2>
+<p>Even after the GSoC period, there are still some pending tasks to further refine and enhance the project:</p>
+<ol>
+<li><strong>Fixing the SingleSelect Component:</strong> The SingleSelect component still requires some adjustments for better accessibility.</li>
+<li><strong>Creating a SignUp Page:</strong> A SignUp page needs to be implemented or integrated from the upstream <code>next</code> branch.</li>
+<li><strong>Announcing Popups:</strong> Ensuring that all popups are properly announced when they appear.</li>
+<li><strong>Fixing the Textarea Component:</strong> The textarea component needs improvements to enhance its accessibility.</li>
+<li><strong>Guidance for Text Entries:</strong> Implementing prompts for users to &ldquo;type your message&rdquo; in relevant text entry fields.</li>
+</ol>
+<h2 id="the-verdict">The Verdict</h2>
+<p>My GSoC journey with Zendalona, Trudesk, and accessibility has been an enriching experience. It was more than just coding; it was about understanding the importance of inclusivity in technology. By enhancing Trudesk&rsquo;s accessibility, we’ve taken a step towards ensuring that the web is usable by everyone, regardless of their abilities.</p>
+<p>If you&rsquo;re interested in the project or want to contribute, feel free to check out the <a href="https://github.com/anima-regem/trudesk">custom Trudesk repository</a> and the hosted version at <a href="http://13.235.119.106:8118">http://13.235.119.106:8118</a>. Let’s keep pushing for a more accessible web!</p>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p><strong>ARIA and Keyboard Shortcuts:</strong></p>
+<ul>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#keyboardshortcuts">ARIA Keyboard Interface Practices</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts">aria-keyshortcuts Attribute on MDN</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles">Landmark Roles on MDN</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Combobox and Accordion Patterns:</strong></p>
+<ul>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/">Combobox Select-Only Example</a></li>
+<li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/examples/accordion/">ARIA Accordion Patterns</a></li>
+<li><a href="https://universaldesign.ie/communications-digital/web-and-mobile-accessibility/web-accessibility-techniques/developers-introduction-and-index/ensure-custom-widgets-are-accessible/create-accessible-accordions">Ensure Accessible Accordions</a></li>
+</ul>
+</li>
+<li>
+<p><strong>General Accessibility Guidelines:</strong></p>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG22/#no-keyboard-trap">Web Content Accessibility Guidelines (WCAG) - No Keyboard Trap</a></li>
+<li><a href="https://webaim.org/techniques/keyboard/">WebAIM Keyboard Accessibility Techniques</a></li>
+<li><a href="https://ej2.syncfusion.com/react/documentation/common/accessibility/">Syncfusion React Accessibility Documentation</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Focus Management and UI Considerations:</strong></p>
+<ul>
+<li><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html#techniques">Focus Order Understanding</a></li>
+<li><a href="https://medium.com/swlh/improve-accessibility-in-your-react-app-by-managing-focus-in-mutable-content-4ddf4ed92186">Improve Accessibility in React Apps by Managing Focus</a></li>
+<li><a href="https://stackoverflow.com/a/46036043">Auto Focus on Input with React</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Project-Specific Resources:</strong></p>
+<ul>
+<li><a href="https://github.com/polonel/trudesk/discussions/674">Discussion on Trudesk Accessibility</a></li>
+<li><a href="https://docs.trudesk.io/v1.2/getting-started/deployment/ubuntu-deployment">Trudesk Deployment Guide</a></li>
+</ul>
+</li>
+<li>
+<p><strong>React and SPA Accessibility:</strong></p>
+<ul>
+<li><a href="https://nextjs.org/docs/architecture/accessibility">Next.js Accessibility Documentation</a></li>
+<li><a href="https://www.gatsbyjs.com/blog/2020-02-10-accessible-client-side-routing-improvements/">Gatsby Client-Side Routing Improvements</a></li>
+<li><a href="https://github.com/AlmeroSteyn/react-aria-live-route">React Aria Live Route</a></li>
+<li><a href="https://github.com/remix-run/react-router/issues/5210">React Router Accessibility</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Other Useful Discussions and Solutions:</strong></p>
+<ul>
+<li><a href="https://medium.com/swlh/improve-accessibility-in-your-react-app-by-managing-focus-in-mutable-content-4ddf4ed92186">Accessibility in Mutable Content</a></li>
+<li><a href="https://legacy.reactjs.org/docs/hooks-reference.html#useid">React&rsquo;s useId Hook Documentation</a></li>
+<li><a href="https://www.gatsbyjs.com/blog/2020-02-10-accessible-client-side-routing-improvements/">Accessible Client-Side Routing</a></li>
+<li><a href="https://github.com/oslabs-beta/aditum">Aditum - Accessibility in React Applications</a></li>
+<li><a href="https://github.com/oaf-project/oaf-react-router">Oaf Project - React Router Accessibility</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Video References:</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=0ckOUBiuxVY&amp;t=20655s">Demystifying Accessibility in React Apps</a></li>
+</ul>
+</li>
+</ol>
+<p>These references were instrumental in guiding the development process and ensuring that the final product met the necessary accessibility standards.</p>
 
     
   </div>
@@ -173,8 +310,8 @@
             <div class="single-pagination-container-prev">
                 <div class="single-pagination-text">←</div>
                 <div class="single-pagination-text">
-                    <a href="/posts/web-accessibility-gsoc-and-more/">
-                        Web Accessibility, GSoC, and More ft. Zendalona
+                    <a href="/posts/react-and-accessibility/">
+                        React and Accessibility
                     </a>
                 </div>
             </div>
@@ -182,15 +319,6 @@
         </div>
 
         <div class="single-pagination-next">
-            
-            <div class="single-pagination-container-next">
-                <div class="single-pagination-text">
-                    <a href="/posts/react-and-accessibility/">
-                        React and Accessibility
-                    </a>
-                </div>
-                <div class="single-pagination-text">→</div>
-            </div>
             
         </div>
 
