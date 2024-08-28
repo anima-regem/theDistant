@@ -21,13 +21,13 @@ The project I worked on as part of Google Summer of Code 2024(GSoC 2024) involve
 
 ## The Grand Plan
 
-The plan, at the outset, seemed straightforward enough: make the project more screen reader-friendly during the first month and then dive into implementing some custom features. Simple, right? Well, as it turns out, that initial scope was significantly optimistic. The goal of making the project truly accessible to screen readers quickly revealed itself to be a monumental task, far more complex than I had anticipated. 
+The plan, at the outset, seemed straightforward enough: make the project more screen reader-friendly during the first month and then dive into implementing some custom features. Simple, right? Well, as it turns out, that initial scope was significantly optimistic. The goal of making the project truly accessible to screen readers quickly revealed itself to be a monumental task, far more complex than I had anticipated.
 
 As I started navigating through the codebase, I realized that the issues weren’t just surface-level tweaks—they were deeply embedded in the structure of the application. The project was heavily reliant on custom components, which meant that many accessibility issues couldn’t be resolved with a quick fix. Each custom component had its own quirks, and figuring out where the problems lay often felt like trying to find a needle in a haystack. A task that seemed simple on the surface, like making a button accessible or ensuring a popup was announced, often took hours or even days of trial and error.
 
 On top of that, the project setup itself was not the most cooperative. Every time I thought I was making progress, I’d hit a roadblock when trying to build the project on a different machine. The setup would break, and I’d find myself back at square one, trying to troubleshoot issues that seemed to crop up out of nowhere. It was frustrating, to say the least. But thanks to my mentor, @Akshay, these challenges became bearable. There were moments when I’d spend hours wrestling with a problem, only for him to step in and solve it in a matter of seconds. His guidance was invaluable, and I can’t overstate how much his support meant during those tough times.
 
-Despite these challenges, by the end of the GSoC coding period on August 19th, the project had come a long way. The entire application can now be navigated using just the keyboard, with screen reader announcements guiding the way. It’s a far cry from where we started, but it’s not perfect yet. There are still some issues that need to be addressed, as noted in the TODO list, but the progress made so far is something I’m proud of. The journey has been intense, filled with unexpected hurdles, but seeing the project become more inclusive and accessible has made it all worth it. 
+Despite these challenges, by the end of the GSoC coding period on August 19th, the project had come a long way. The entire application can now be navigated using just the keyboard, with screen reader announcements guiding the way. It’s a far cry from where we started, but it’s not perfect yet. There are still some issues that need to be addressed, as noted in the TODO list, but the progress made so far is something I’m proud of. The journey has been intense, filled with unexpected hurdles, but seeing the project become more inclusive and accessible has made it all worth it.
 
 The work isn’t done, but this phase of the project has laid a solid foundation for the improvements yet to come.
 
@@ -47,7 +47,7 @@ The work isn’t done, but this phase of the project has laid a solid foundation
 
 You can read more about the project at [ZenDesk post](/docs/zendesk)
 
-You can explore the codebase for these enhancements on my [custom Trudesk repository](https://github.com/anima-regem/trudesk). The project is currently hosted and live at [http://13.235.119.106:8118](http://13.235.119.106:8118).
+You can explore the codebase for these enhancements on my [custom Trudesk repository](https://github.com/anima-regem/trudesk). The project is currently hosted and live at [zendesk.animaregem.me](https://zendesk.animaregem.me).
 
 ### Merged Pull Requests
 
