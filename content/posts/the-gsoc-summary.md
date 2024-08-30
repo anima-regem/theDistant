@@ -79,7 +79,7 @@ Even after the GSoC period, there are still some pending tasks to further refine
 
 My GSoC journey with Zendalona, Trudesk, and accessibility has been an enriching experience. It was more than just coding; it was about understanding the importance of inclusivity in technology. By enhancing Trudesk's accessibility, we’ve taken a step towards ensuring that the web is usable by everyone, regardless of their abilities.
 
-If you're interested in the project or want to contribute, feel free to check out the [custom Trudesk repository](https://github.com/anima-regem/trudesk) and the hosted version at [http://13.235.119.106:8118](http://13.235.119.106:8118). Let’s keep pushing for a more accessible web!
+If you're interested in the project or want to contribute, feel free to check out the [custom Trudesk repository](https://github.com/anima-regem/trudesk) and the hosted version at [https://zendesk.animaregem.me](https://zendesk.animaregem.me). Let’s keep pushing for a more accessible web!
 
 ## References
 
