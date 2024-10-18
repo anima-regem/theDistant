@@ -65,17 +65,25 @@ After installing MongoDB, create an admin user for the Trudesk database:
 2. Switch to the `admin` database:
 
    ```bash
-   use admin
+   use trudesk
    ```
 
 3. Create an admin user with the following command:
 
    ```javascript
-   db.createUser({
-      user: "trudeskAdmin",
-      pwd: "yourPasswordHere",
-      roles: [{ role: "userAdmin", db: "trudesk" }]
-   })
+
+   db.createUser(
+    {
+        user: "trudesk",
+        pwd: "trudesk",
+        roles: [
+                  { role: "userAdminAnyDatabase", db: "admin" },
+                  { role: "readWriteAnyDatabase", db: "admin" },
+                  { role: "dbAdminAnyDatabase", db: "admin" },
+                  { role: "clusterAdmin", db: "admin" }
+               ]
+    })
+
    ```
 
 Replace `"yourPasswordHere"` with a secure password.

@@ -6,12 +6,12 @@
     <description>Recent content in Gsoc on Vichukartha</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/gsoc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The GSoC Summary</title>
       <link>//localhost:1313/posts/the-gsoc-summary/</link>
-      <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 Aug 2024 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/posts/the-gsoc-summary/</guid>
       <description>The final report on GSoC 2024 under Zendalona working on the User Query Management Software</description>
     </item>

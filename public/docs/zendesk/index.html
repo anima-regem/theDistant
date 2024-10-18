@@ -240,15 +240,22 @@
 </span></span></code></pre></div></li>
 <li>
 <p>Switch to the <code>admin</code> database:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>use admin
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>use trudesk
 </span></span></code></pre></div></li>
 <li>
 <p>Create an admin user with the following command:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>db.createUser({
-</span></span><span style="display:flex;"><span>   user: <span style="color:#666;font-style:italic">&#34;trudeskAdmin&#34;</span>,
-</span></span><span style="display:flex;"><span>   pwd: <span style="color:#666;font-style:italic">&#34;yourPasswordHere&#34;</span>,
-</span></span><span style="display:flex;"><span>   roles: [{ role: <span style="color:#666;font-style:italic">&#34;userAdmin&#34;</span>, db: <span style="color:#666;font-style:italic">&#34;trudesk&#34;</span> }]
-</span></span><span style="display:flex;"><span>})
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>db.createUser(
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span>     user: <span style="color:#666;font-style:italic">&#34;trudesk&#34;</span>,
+</span></span><span style="display:flex;"><span>     pwd: <span style="color:#666;font-style:italic">&#34;trudesk&#34;</span>,
+</span></span><span style="display:flex;"><span>     roles: [
+</span></span><span style="display:flex;"><span>               { role: <span style="color:#666;font-style:italic">&#34;userAdminAnyDatabase&#34;</span>, db: <span style="color:#666;font-style:italic">&#34;admin&#34;</span> },
+</span></span><span style="display:flex;"><span>               { role: <span style="color:#666;font-style:italic">&#34;readWriteAnyDatabase&#34;</span>, db: <span style="color:#666;font-style:italic">&#34;admin&#34;</span> },
+</span></span><span style="display:flex;"><span>               { role: <span style="color:#666;font-style:italic">&#34;dbAdminAnyDatabase&#34;</span>, db: <span style="color:#666;font-style:italic">&#34;admin&#34;</span> },
+</span></span><span style="display:flex;"><span>               { role: <span style="color:#666;font-style:italic">&#34;clusterAdmin&#34;</span>, db: <span style="color:#666;font-style:italic">&#34;admin&#34;</span> }
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span> })
 </span></span></code></pre></div></li>
 </ol>
 <p>Replace <code>&quot;yourPasswordHere&quot;</code> with a secure password.</p>
