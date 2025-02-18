@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tricks on Vichukartha</title>
+    <link>//localhost:1313/tricks/</link>
+    <description>Recent content in Tricks on Vichukartha</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tricks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Soft Wrap in Zed Text Editor</title>
+      <link>//localhost:1313/tricks/soft-wrap/</link>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tricks/soft-wrap/</guid>
+      <description>Soft Wrap in Zed Text Editor</description>
+    </item>
+  </channel>
+</rss>

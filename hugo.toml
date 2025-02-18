@@ -65,6 +65,10 @@ name = "docs"
 url = "/docs"
 
 [[params.menu]]
+name = "tricks"
+url = "/tricks"
+
+[[params.menu]]
 name = "about"
 url = "/about"
 

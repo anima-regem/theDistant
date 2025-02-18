@@ -6,8 +6,15 @@
     <description>Recent content in Home on Vichukartha</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Soft Wrap in Zed Text Editor</title>
+      <link>//localhost:1313/tricks/soft-wrap/</link>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tricks/soft-wrap/</guid>
+      <description>Soft Wrap in Zed Text Editor</description>
+    </item>
     <item>
       <title>An Essay on Large Language Models</title>
       <link>//localhost:1313/essays/llm/</link>
