@@ -1,3 +1,17 @@
+---
+title: "The Tale of Two Gits"
+date: "2025-02-20"
+summary: "Ever juggled with having to manage two different git accounts?"
+# description: ""
+toc: true
+readTime: true
+autonumber: true
+math: true
+tags: ["git", "two git", "identity management"]
+showTags: false
+hideBackToTop: false
+---
+
 # The Tale of Two Git Accounts: A Developer's Identity Crisis
 
 Picture this: It's 2 AM, and I'm sitting in my dimly lit room, staring at my laptop screen in horror. I just pushed my personal project's code - complete with comments about how my day job's codebase is a "prehistoric spaghetti monster" - to my work repository. Talk about a Monday morning conversation I'm not looking forward to!
